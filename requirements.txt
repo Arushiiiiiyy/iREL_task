@@ -1,0 +1,10 @@
+yt-dlp>=2024.8.6
+faster-whisper>=1.0.3
+pydantic>=2.8.2
+PyYAML>=6.0.2
+networkx>=3.3
+langdetect>=1.0.9
+rapidfuzz>=3.9.6
+tqdm>=4.66.5
+python-dotenv>=1.0.1
+openai>=1.40.0
