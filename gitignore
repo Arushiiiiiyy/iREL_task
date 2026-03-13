@@ -1,0 +1,63 @@
+# ── Virtual environment (all common names + typos) ────────────
+.venv/
+.venve/
+venv/
+env/
+ENV/
+.env/
+virtualenv/
+
+# ── Environment / secrets ─────────────────────────────────────
+.env
+*.env
+
+# ── Python cache ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# ── Audio files (downloaded by yt-dlp) ────────────────────────
+*.webm
+*.mp3
+*.m4a
+*.opus
+*.wav
+*.ogg
+data/*/audio.*
+
+# ── Model weights / HuggingFace cache ─────────────────────────
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+*.npz
+*.mlpackage/
+.cache/
+huggingface/
+mlx_models/
+models/
+
+# ── Pipeline outputs (auto-generated) ─────────────────────────
+outputs/
+data/*/transcript.json
+
+# ── Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+._*
+Thumbs.db
+
+# ── IDE ───────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -26,6 +26,8 @@ def run_pipeline(
     output_root: Path,
     whisper_model: str = "small",
     skip_download: bool = False,
+    ssl_ca_file: Path | None = None,
+    insecure_model_download: bool = False,
 ) -> None:
     cfg = load_yaml(config_path)
     videos = [VideoItem(**v) for v in cfg["videos"]]
@@ -39,7 +41,13 @@ def run_pipeline(
             if skip_download:
                 raise FileNotFoundError(f"Missing transcript: {transcript_path}")
             audio_path = download_audio(video.url, video_dir)
-            transcribe_audio(audio_path, transcript_path, model_size=whisper_model)
+            transcribe_audio(
+                audio_path,
+                transcript_path,
+                model_size=whisper_model,
+                ca_bundle_path=ssl_ca_file,
+                allow_insecure_download=insecure_model_download,
+            )
 
         segments = _load_transcript(transcript_path)
         segments = normalize_segments(segments)

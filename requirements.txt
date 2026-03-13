@@ -1,5 +1,7 @@
 yt-dlp>=2024.8.6
 faster-whisper>=1.0.3
+openai-whisper>=20240930
+certifi>=2024.8.30
 pydantic>=2.8.2
 PyYAML>=6.0.2
 networkx>=3.3

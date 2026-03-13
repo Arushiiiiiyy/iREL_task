@@ -101,7 +101,13 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-Also ensure `ffmpeg` is installed on your machine (needed by `yt-dlp --extract-audio`).
+Also ensure `ffmpeg` is installed on your machine (needed by `yt-dlp --extract-audio` and Whisper audio loading).
+
+On macOS with Homebrew:
+
+```bash
+brew install ffmpeg
+```
 
 ---
 
@@ -110,6 +116,25 @@ Also ensure `ffmpeg` is installed on your machine (needed by `yt-dlp --extract-a
 ### Full run (download + ASR + extraction)
 ```bash
 scripts/run_pipeline.sh
+```
+
+If Whisper model download fails with corporate or self-signed TLS interception, provide your trusted CA bundle:
+
+```bash
+scripts/run_pipeline.sh --ssl-ca-file /path/to/company-ca.pem
+```
+
+Or set it once through the environment:
+
+```bash
+export CMPFE_SSL_CA_FILE=/path/to/company-ca.pem
+scripts/run_pipeline.sh
+```
+
+As a last resort for isolated environments you control, you can disable verification only for the Whisper model download step:
+
+```bash
+scripts/run_pipeline.sh --insecure-model-download
 ```
 
 ### If transcripts already exist (`data/<video_id>/transcript.json`)
