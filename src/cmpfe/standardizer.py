@@ -37,4 +37,3 @@ def standardize_term(raw: str, threshold: int = 85) -> str:
     if best_score >= threshold:
         return best
     return raw.strip().lower()
-

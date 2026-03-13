@@ -3,8 +3,6 @@ from __future__ import annotations
 from pathlib import Path
 from typing import List
 
-from faster_whisper import WhisperModel
-
 from .io_utils import dump_json
 from .models import TranscriptSegment
 
@@ -15,6 +13,13 @@ def transcribe_audio(
     model_size: str = "small",
     compute_type: str = "int8",
 ) -> List[TranscriptSegment]:
+    try:
+        from faster_whisper import WhisperModel
+    except ModuleNotFoundError as exc:
+        raise ModuleNotFoundError(
+            "faster-whisper is required for transcription. Install dependencies via `pip install -r requirements.txt`."
+        ) from exc
+
     model = WhisperModel(model_size, compute_type=compute_type)
     segments, info = model.transcribe(str(audio_path), beam_size=5)
 

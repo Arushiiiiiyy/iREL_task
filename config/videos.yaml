@@ -1,0 +1,30 @@
+videos:
+  - id: v1_hinglish_dsa
+    title: "Introduction to Data Structures and Algorithms (Hinglish)"
+    url: "https://www.youtube.com/watch?v=RBSGKlAvoiM"
+    domain: "Computer Science"
+    declared_code_mix: ["Hindi-English"]
+
+  - id: v2_hindi_os
+    title: "Operating System Basics in Hindi"
+    url: "https://www.youtube.com/watch?v=vBURTt97EkA"
+    domain: "Computer Science"
+    declared_code_mix: ["Hindi-English"]
+
+  - id: v3_telugu_java
+    title: "Java OOP Concepts - Telugu Explanation"
+    url: "https://www.youtube.com/watch?v=eIrMbAQSU34"
+    domain: "Computer Science"
+    declared_code_mix: ["Telugu-English"]
+
+  - id: v4_tamil_networking
+    title: "Computer Networks Basics (Tamil + English)"
+    url: "https://www.youtube.com/watch?v=qiQR5rTSshw"
+    domain: "Computer Science"
+    declared_code_mix: ["Tamil-English"]
+
+  - id: v5_hinglish_physics
+    title: "Current Electricity One Shot (Hinglish)"
+    url: "https://www.youtube.com/watch?v=Y4jYxk2M4kE"
+    domain: "Physics"
+    declared_code_mix: ["Hindi-English"]
